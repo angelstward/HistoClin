@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="ingrese_nombre_usuario">Nombre Usuario</string>
+    <string name="iniciar_sesion">Iniciar</string>
+    <string name="datos_incorrectos">Los datos ingresados son incorrectos</string>
+    <string name="nombre_paciente_titulo">Nombre Paciente</string>
+    <string name="nombre_usuario_titulo">Nombre Usuario</string>
+    <string name="registrar_paciente">Registrar Paciente</string>
+    <string name="documento_buscar">Documento Paciente</string>
+    <string name="documento_paciente">Documento Paciente</string>
+    <string name="apeliido_paciente">Apellido Paciente</string>
+    <string name="paciente_no_encontrado">No existe un paciente con esa documento</string>
+</resources>
