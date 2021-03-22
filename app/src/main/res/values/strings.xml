@@ -19,5 +19,23 @@
     <string name="documento_buscar">Documento Paciente</string>
     <string name="documento_paciente">Documento Paciente</string>
     <string name="apeliido_paciente">Apellido Paciente</string>
-    <string name="paciente_no_encontrado">No existe un paciente con esa documento</string>
+    <string name="paciente_no_encontrado">No existe un paciente con ese documento</string>
+    <string name="ingrese_documentopaciente">Ingrese el documento del paciente</string>
+    <string name="ingrese_apellido_paciente">Ingrese el apellido del paciente</string>
+    <string name="ingrese_fecha_nacimiento_pacinete">Ingrese la fecha de nacimineto del paciente</string>
+    <string name="crear">Crear</string>
+    <string name="cancelar">Cancelar</string>
+    <string name="ingrese_nombre_paciente">Ingrese el nombre del paciente</string>
+    <string name="fecha_nacimineto">Fecha de nacimiento</string>
+    <string name="registrar_fecha">Registrar Fecha</string>
+    <string name="edad">Edad</string>
+    <string name="paciente_ya_existe">Ya existe un paciente con ese documento</string>
+    <string name="documento">Documento</string>
+    <string name="nombre">Nombre</string>
+    <string name="apellido">Apellido</string>
+    <string name="edad_titulo">Edad:</string>
+    <string name="fecha_nacimineto_titulo">Fecha Namto:</string>
+    <string name="apellido_titulo">Apellido:</string>
+    <string name="nombre_titulo">Nombre:</string>
+    <string name="documento_titulo">Documento:</string>
 </resources>

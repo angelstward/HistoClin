@@ -59,6 +59,8 @@ public class PacienteAdapter extends BaseAdapter {
         holder.documentoPaciente.setText(pacientes.get(position).getDocumento());
         holder.nombrePaciente.setText(pacientes.get(position).getNombre());
         holder.apellidoPaciente.setText(pacientes.get(position).getApellido());
+        holder.fechaNacimiento.setText(pacientes.get(position).getFechaNacimiento().toString());
+        holder.edad.setText(String.valueOf(pacientes.get(position).getEdad()));
 
         return convertView;
     }
@@ -72,6 +74,12 @@ public class PacienteAdapter extends BaseAdapter {
 
         @BindView(R.id.apellido_paciente_item)
         TextView apellidoPaciente;
+
+        @BindView(R.id.fecha_nacimiento_item)
+        TextView fechaNacimiento;
+
+        @BindView(R.id.edad_item_paciente)
+        TextView edad;
 
         public ViewHolder(View view){
             ButterKnife.bind(this, view);
