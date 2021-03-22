@@ -85,6 +85,8 @@ public class RegistrarPacienteActivity extends AppCompatActivity {
 
        });
 
+       btnCancelar.setOnClickListener(v -> goToMain());
+
     }
 
     private void goToMain(){

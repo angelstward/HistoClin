@@ -34,8 +34,13 @@
     <string name="nombre">Nombre</string>
     <string name="apellido">Apellido</string>
     <string name="edad_titulo">Edad:</string>
-    <string name="fecha_nacimineto_titulo">Fecha Namto:</string>
+    <string name="fecha_nacimineto_titulo">Fecha Nto.:</string>
     <string name="apellido_titulo">Apellido:</string>
     <string name="nombre_titulo">Nombre:</string>
     <string name="documento_titulo">Documento:</string>
+    <string name="pregunta_1">Pregunta 1</string>
+    <string name="pregunta_2">Pregunta 2</string>
+    <string name="pregunta_3">Pregunta 3</string>
+    <string name="observaciones">Observaciones</string>
+    <string name="guardar">guardar</string>
 </resources>
