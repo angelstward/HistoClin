@@ -14,30 +14,23 @@ import java.util.Locale;
 
 public class PacienteDAO {
     PacienteMOCK pacienteMOCK = new PacienteMOCK();
-    List<Paciente> pacientes = pacienteMOCK.getPaciente();
-
-
-
-
 
     public boolean agregarPaciente(String documento, String nombre, String apellido, LocalDate fechaNacimiento){
-
-
-        Paciente pacienteAgregar = new Paciente(pacientes.size()+1,documento,nombre,apellido,fechaNacimiento);
+        Paciente pacienteAgregar = new Paciente( pacienteMOCK.pacientes.size()+1,documento,nombre,apellido,fechaNacimiento);
         if(pacienteExiste(documento)){
             return false;
         }else{
-
-            pacienteMOCK.getPaciente().add(pacienteAgregar);
+            pacienteMOCK.pacientes.add(pacienteAgregar);
             return true;
         }
 
     }
 
     public Paciente buscar(String documento){
-        for (int i = 0; i<pacientes.size();i++){
-            if(pacientes.get(i).getDocumento().equals(documento)){
-               return pacientes.get(i);
+
+        for (int i = 0; i< pacienteMOCK.pacientes.size();i++){
+            if( pacienteMOCK.pacientes.get(i).getDocumento().equals(documento)){
+               return  pacienteMOCK.pacientes.get(i);
             }
         }
         return null;
