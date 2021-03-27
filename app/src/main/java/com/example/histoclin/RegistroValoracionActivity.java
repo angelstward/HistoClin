@@ -57,13 +57,8 @@ public class RegistroValoracionActivity extends AppCompatActivity {
         nombre.setText(inten.getStringExtra("nombre_paciente"));
 
         guardar.setOnClickListener(v -> {
-
-
             valoracionDAO.guargar(inten.getStringExtra("documento_paciente"),llenarPreguntas());
             goToMain();
-
-
-
         });
 
         cancelar.setOnClickListener(v -> goToMain());
@@ -76,9 +71,7 @@ public class RegistroValoracionActivity extends AppCompatActivity {
         preguntas.add(new Pregunta(pregunta3.getText().toString(),respuesta2.getText().toString()));
         preguntas.add(new Pregunta(pregunta3.getText().toString(),respuesta3.getText().toString()));
         preguntas.add(new Pregunta(observacion.getText().toString(),respuestaobservacion.getText().toString()));
-
         return preguntas;
-
     }
 
     private void goToMain(){
