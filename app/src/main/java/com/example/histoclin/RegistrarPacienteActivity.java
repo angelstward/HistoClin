@@ -75,13 +75,14 @@ public class RegistrarPacienteActivity extends AppCompatActivity {
 
        btnRegistrar.setOnClickListener(v -> {
 
-           if (pacienteDAO.agregarPaciente(documentoRegistro.getText().toString(), nombreRegistro.getText().toString(),
-                   apellidoRegistro.getText().toString(), fechaGuardar)) {
-               goToMain();
-           } else {
-               Toast.makeText(this, R.string.paciente_ya_existe, Toast.LENGTH_LONG).show();
-           }
-
+        if(validarCampos()){
+            if (pacienteDAO.agregarPaciente(documentoRegistro.getText().toString(), nombreRegistro.getText().toString(),
+                    apellidoRegistro.getText().toString(), fechaGuardar)) {
+                goToMain();
+            } else {
+                Toast.makeText(this, R.string.paciente_ya_existe, Toast.LENGTH_LONG).show();
+            }
+        }
 
        });
 
@@ -93,6 +94,25 @@ public class RegistrarPacienteActivity extends AppCompatActivity {
         Intent intent = new Intent(this,MainActivity.class);
         startActivity(intent);
     }
+     private boolean validarCampos(){
+        if(documentoRegistro.getText().toString().isEmpty() || documentoRegistro.equals(null)){
+            Toast.makeText(this, R.string.documeto_vacio, Toast.LENGTH_LONG).show();
+            return false;
+        }else if(nombreRegistro.getText().toString().isEmpty()|| nombreRegistro.equals(null)){
+            Toast.makeText(this, R.string.nombre_vacio, Toast.LENGTH_LONG).show();
+            return false;
+        }else if(apellidoRegistro.getText().toString().isEmpty() || apellidoRegistro.equals(null)){
+            Toast.makeText(this, R.string.apellido_vacio, Toast.LENGTH_LONG).show();
+            return false;
+        }else if(fecha.getText().toString().isEmpty()|| fecha.equals(null)){
+            Toast.makeText(this, R.string.fecha_vacia, Toast.LENGTH_LONG).show();
+            return false;
+        }else{
 
+            return true;
+        }
+
+
+     }
 
 }

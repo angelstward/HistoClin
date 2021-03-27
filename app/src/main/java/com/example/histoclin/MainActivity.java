@@ -62,7 +62,7 @@ public class MainActivity extends AppCompatActivity {
         listViewPacientes.setOnItemClickListener((parent, view, position, id) ->{
 
             Paciente pacienteSeleccionado = (Paciente) listViewPacientes.getItemAtPosition(position);
-            goToRegistroValoracion(pacienteSeleccionado.getDocumento(), pacienteSeleccionado.getNombre());
+            goToRegistroValoracion(pacienteSeleccionado.getDocumento(), pacienteSeleccionado.getNombre(), pacienteSeleccionado.getApellido());
 
 
         });
@@ -93,10 +93,11 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
-    private void goToRegistroValoracion(String documento, String nombre){
+    private void goToRegistroValoracion(String documento, String nombre, String apellido){
         Intent intent = new Intent(this, RegistroValoracionActivity.class);
         intent.putExtra("documento_paciente",documento);
         intent.putExtra("nombre_paciente",nombre);
+        intent.putExtra("apellido_paciente",apellido);
         startActivity(intent);
     }
 

@@ -43,4 +43,13 @@
     <string name="pregunta_3">Pregunta 3</string>
     <string name="observaciones">Observaciones</string>
     <string name="guardar">guardar</string>
+    <string name="documeto_vacio">El campo de documento no puede ser vacio.</string>
+    <string name="nombre_vacio">El campo de nombre no puede ser vacio.</string>
+    <string name="apellido_vacio">El campo de apellido no puede ser vacio.</string>
+    <string name="fecha_vacia">El campo de fecha de nacimiento no puede ser vacio.</string>
+    <string name="verificar_campo">Verifique que los campos no esten vacios</string>
+    <string name="repuesta_1">La respuesta a la pregunta 1 no puede estar vacia</string>
+    <string name="respuesta_2">La respuesta a la pregunta 2 no puede estar vacia</string>
+    <string name="respuesta_3">La respuesta a la pregunta 3 no puede estar vacia</string>
+    <string name="observacion_vacia">La observacion no puede estar vacia</string>
 </resources>

@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.histoclin.entity.Pregunta;
 import com.example.histoclin.persitencia.ValoracionDAO;
@@ -54,11 +55,13 @@ public class RegistroValoracionActivity extends AppCompatActivity {
         setContentView(R.layout.activity_registro_valoracion);
         ButterKnife.bind(this);
         Intent inten =getIntent();
-        nombre.setText(inten.getStringExtra("nombre_paciente"));
+        nombre.setText(inten.getStringExtra("nombre_paciente")+" "+inten.getStringExtra("apellido_paciente"));
 
         guardar.setOnClickListener(v -> {
-            valoracionDAO.guargar(inten.getStringExtra("documento_paciente"),llenarPreguntas());
-            goToMain();
+           if(validarCampos()){
+               valoracionDAO.guargar(inten.getStringExtra("documento_paciente"),llenarPreguntas());
+               goToMain();
+           }
         });
 
         cancelar.setOnClickListener(v -> goToMain());
@@ -78,4 +81,25 @@ public class RegistroValoracionActivity extends AppCompatActivity {
         Intent intent = new Intent(this,MainActivity.class);
         startActivity(intent);
     }
+    private boolean validarCampos(){
+        if(respuesta1.getText().toString().isEmpty() || respuesta1.equals(null)){
+            Toast.makeText(this, R.string.repuesta_1, Toast.LENGTH_LONG).show();
+            return false;
+        }else if(respuesta2.getText().toString().isEmpty()|| respuesta2.equals(null)){
+            Toast.makeText(this, R.string.respuesta_2, Toast.LENGTH_LONG).show();
+            return false;
+        }else if(respuesta3.getText().toString().isEmpty() || respuesta3.equals(null)){
+            Toast.makeText(this, R.string.respuesta_3, Toast.LENGTH_LONG).show();
+            return false;
+        }else if(respuestaobservacion.getText().toString().isEmpty()|| respuestaobservacion.equals(null)){
+            Toast.makeText(this, R.string.observacion_vacia, Toast.LENGTH_LONG).show();
+            return false;
+        }else{
+
+            return true;
+        }
+
+
+    }
+
 }
