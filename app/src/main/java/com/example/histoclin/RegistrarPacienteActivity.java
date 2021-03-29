@@ -93,6 +93,7 @@ public class RegistrarPacienteActivity extends AppCompatActivity {
     private void goToMain(){
         Intent intent = new Intent(this,MainActivity.class);
         startActivity(intent);
+        finish();
     }
      private boolean validarCampos(){
         if(documentoRegistro.getText().toString().isEmpty() || documentoRegistro.equals(null)){
@@ -114,5 +115,9 @@ public class RegistrarPacienteActivity extends AppCompatActivity {
 
 
      }
+    @Override
+    public void onBackPressed (){
+       goToMain();
+    }
 
 }

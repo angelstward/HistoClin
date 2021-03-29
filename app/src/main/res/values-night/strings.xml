@@ -49,4 +49,5 @@
     <string name="respuesta_2">La respuesta a la pregunta 2 no puede estar vacia</string>
     <string name="respuesta_3">La respuesta a la pregunta 3 no puede estar vacia</string>
     <string name="observacion_vacia">La observacion no puede estar vacia</string>
+    <string name="cerrar_sesion">Salir</string>
 </resources>

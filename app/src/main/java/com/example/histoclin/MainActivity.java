@@ -36,6 +36,9 @@ public class MainActivity extends AppCompatActivity {
     @BindView(R.id.nombre_usuario_main)
     TextView nombreUsuarioTitulo;
 
+    @BindView(R.id.cerrar_sesion)
+    TextView cerrarSesion;
+
     @BindView(R.id.btn_registrar_paciente)
     Button registrarPaciente;
 
@@ -48,15 +51,18 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         ButterKnife.bind(this);
+        cerrarSesion.setClickable(true);
         Intent intent = getIntent();
         nombreUsuarioTitulo.setText(intent.getStringExtra("nombre_usuario"));
+
+        cerrarSesion.setOnClickListener(v -> goToLogin() );
 
         buscar.setOnClickListener(v -> {
             cargarPaciente(documetoIngresado.getText().toString());
 
         });
 
-        registrarPaciente.setOnClickListener(v -> goToRegistrar());
+        registrarPaciente.setOnClickListener(v -> goToRegistrarPacienet());
 
         listViewPacientes.setClickable(true);
         listViewPacientes.setOnItemClickListener((parent, view, position, id) ->{
@@ -88,9 +94,10 @@ public class MainActivity extends AppCompatActivity {
         }
 
     }
-    private void goToRegistrar(){
+    private void goToRegistrarPacienet(){
         Intent intent =new Intent(this,RegistrarPacienteActivity.class) ;
         startActivity(intent);
+        finish();
     }
 
     private void goToRegistroValoracion(String documento, String nombre, String apellido){
@@ -99,6 +106,18 @@ public class MainActivity extends AppCompatActivity {
         intent.putExtra("nombre_paciente",nombre);
         intent.putExtra("apellido_paciente",apellido);
         startActivity(intent);
+        finish();
+    }
+
+    private void goToLogin(){
+        Intent intent = new Intent(this, LoginActivity.class);
+        intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+        startActivity(intent);
+        finish();
+    }
+    @Override
+    public void onBackPressed (){
+
     }
 
 }

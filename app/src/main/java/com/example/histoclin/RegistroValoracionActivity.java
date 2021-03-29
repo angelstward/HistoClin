@@ -101,5 +101,9 @@ public class RegistroValoracionActivity extends AppCompatActivity {
 
 
     }
+    @Override
+    public void onBackPressed (){
+       goToMain();
+    }
 
 }

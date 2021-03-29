@@ -19,6 +19,7 @@
         app:layout_constraintVertical_bias="0.0"
         app:srcCompat="@drawable/logo_login"
         tools:ignore="MissingConstraints" />
+
     <TextView
         android:id="@+id/nombre_usuario_main"
         android:layout_width="0dp"
@@ -47,8 +48,8 @@
         android:layout_marginRight="10dp"
         android:layout_marginBottom="10dp"
         android:ems="10"
-        android:inputType="textPersonName"
         android:hint="@string/documento_buscar"
+        android:inputType="textPersonName"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/btn_buscar_main"
         app:layout_constraintStart_toStartOf="parent"
@@ -101,6 +102,23 @@
         app:layout_constraintTop_toBottomOf="@+id/list_view_paciente"
         tools:ignore="UnknownId" />
 
+    <TextView
+        android:id="@+id/cerrar_sesion"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginRight="10dp"
+        android:gravity="center"
+        android:text="@string/cerrar_sesion"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/imagen_logo_main"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/imagen_logo_main"
+        app:layout_constraintTop_toTopOf="@+id/imagen_logo_main"
+        app:layout_constraintVertical_bias="0.0" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
