@@ -5,19 +5,20 @@ import org.joda.time.LocalDate;
 import org.joda.time.Years;
 
 
+import java.util.UUID;
 
 import lombok.Data;
 
 @Data
 public class Paciente {
 
-    private long id;
+    private Long id;
     private String documento;
     private String nombre;
     private String apellido;
     private LocalDate fechaNacimiento;
 
-    public Paciente(long id, String documento, String nombre, String apellido, LocalDate fechaNacimiento) {
+    public Paciente(Long id, String documento, String nombre, String apellido, LocalDate fechaNacimiento) {
         this.id = id;
         this.documento = documento;
         this.nombre = nombre;

@@ -51,7 +51,6 @@ public class RegistrarPacienteActivity extends AppCompatActivity {
     private PacienteDAO pacienteDAO=new PacienteDAO();
 
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -78,6 +77,7 @@ public class RegistrarPacienteActivity extends AppCompatActivity {
         if(validarCampos()){
             if (pacienteDAO.agregarPaciente(documentoRegistro.getText().toString(), nombreRegistro.getText().toString(),
                     apellidoRegistro.getText().toString(), fechaGuardar)) {
+
                 goToMain();
             } else {
                 Toast.makeText(this, R.string.paciente_ya_existe, Toast.LENGTH_LONG).show();
@@ -119,5 +119,6 @@ public class RegistrarPacienteActivity extends AppCompatActivity {
     public void onBackPressed (){
        goToMain();
     }
+
 
 }

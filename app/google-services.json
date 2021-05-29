@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "445663766750",
+    "project_id": "histoclin-e87b7",
+    "storage_bucket": "histoclin-e87b7.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:445663766750:android:b862561548ed645e5a3a4f",
+        "android_client_info": {
+          "package_name": "com.example.histoclin"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "445663766750-pvv598h5ddh8s7g63l9tgigefb09a263.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA6TAhV5kiiwrvFLmtaJ6md2xox_wZvJtE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "445663766750-pvv598h5ddh8s7g63l9tgigefb09a263.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

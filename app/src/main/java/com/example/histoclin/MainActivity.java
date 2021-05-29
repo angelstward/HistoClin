@@ -14,6 +14,7 @@ import android.widget.Toast;
 import com.example.histoclin.adapter.PacienteAdapter;
 import com.example.histoclin.entity.Paciente;
 import com.example.histoclin.persitencia.PacienteDAO;
+import com.google.firebase.auth.FirebaseAuth;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -44,6 +45,7 @@ public class MainActivity extends AppCompatActivity {
 
     private List<Paciente> listaPacientes = new ArrayList<>();
     private PacienteAdapter pacienteAdapter;
+    PacienteDAO pacienteDAO =new PacienteDAO();
 
 
     @Override
@@ -51,11 +53,16 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         ButterKnife.bind(this);
+        pacienteDAO.ListarPacientes();
         cerrarSesion.setClickable(true);
         Intent intent = getIntent();
         nombreUsuarioTitulo.setText(intent.getStringExtra("nombre_usuario"));
 
-        cerrarSesion.setOnClickListener(v -> goToLogin() );
+        cerrarSesion.setOnClickListener(v ->{
+            FirebaseAuth.getInstance().signOut();
+            goToLogin();
+
+        });
 
         buscar.setOnClickListener(v -> {
             cargarPaciente(documetoIngresado.getText().toString());
@@ -80,10 +87,8 @@ public class MainActivity extends AppCompatActivity {
 
     private void cargarPaciente(String documento){
         listaPacientes.clear();
-        PacienteDAO pacienteDAO =new PacienteDAO();
+
         Paciente paciente = pacienteDAO.buscar(documento);
-
-
 
         if(paciente==null){
             Toast.makeText(this, R.string.paciente_no_encontrado, Toast.LENGTH_LONG ).show();

@@ -50,4 +50,5 @@
     <string name="respuesta_3">La respuesta a la pregunta 3 no puede estar vacia</string>
     <string name="observacion_vacia">La observacion no puede estar vacia</string>
     <string name="cerrar_sesion">Salir</string>
+    <string name="campos_vacios_login">Por favor llenar los campos</string>
 </resources>
